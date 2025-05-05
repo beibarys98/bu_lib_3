@@ -47,7 +47,7 @@ class Book extends \yii\db\ActiveRecord
             ['cover', 'file', 'extensions' => 'jpg, jpeg, png', 'skipOnEmpty' => true],
 
             [['description', 'authors', 'publisher', 'release', 'isbn', 'pages'], 'default', 'value' => null],
-            [['title', 'language', 'cover_path', 'book_path'], 'required'],
+            [['title'], 'required'],
             [['category_id', 'type_id', 'pages'], 'integer'],
             [['description'], 'string'],
             [['title', 'authors', 'publisher', 'cover_path', 'book_path'], 'string', 'max' => 255],

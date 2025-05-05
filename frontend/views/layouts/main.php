@@ -56,6 +56,14 @@ AppAsset::register($this);
         echo Html::tag('div',Html::a('Регистрация',['/site/signup'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
         echo Html::tag('div',Html::a('Войти',['/site/login'],['class' => ['btn btn-link login text-decoration-none']]),['class' => ['d-flex']]);
     } else {
+        // Search field
+        echo Html::beginForm(['/site/search'], 'get', ['class' => 'd-flex me-2']);
+        echo Html::input('text', 'q', Yii::$app->request->get('q'), [
+            'class' => 'form-control me-2',
+            'placeholder' => 'Поиск...'
+        ]);
+        echo Html::endForm();
+
         echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
             . Html::submitButton(
                 'Выйти (' . Yii::$app->user->identity->username . ')',

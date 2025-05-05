@@ -112,6 +112,25 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionSearch($q = '')
+    {
+        $query = Book::find()
+            ->andWhere(['like', 'title', $q])
+            ->orWhere(['like', 'authors', $q]);
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('search', [
+            'dataProvider' => $dataProvider,
+            'q' => $q,
+        ]);
+    }
+
     /**
      * Logs in a user.
      *
