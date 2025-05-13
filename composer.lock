@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d518d6f837cce6905220f5864c0d95ea",
+    "content-hash": "eae100749c25eea50312f2086a5a2869",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -159,6 +159,63 @@
                 "source": "https://github.com/cebe/markdown"
             },
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "diecoding/yii2-pdfjs",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sugeng-sulistiyawan/yii2-pdfjs.git",
+                "reference": "b885f8877f6f120b5d105a27a8fc65b41c5d3425"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sugeng-sulistiyawan/yii2-pdfjs/zipball/b885f8877f6f120b5d105a27a8fc65b41c5d3425",
+                "reference": "b885f8877f6f120b5d105a27a8fc65b41c5d3425",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0",
+                "yiisoft/yii2": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~9.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "diecoding\\pdfjs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sugeng Sulistiyawan",
+                    "email": "sugeng.sulistiyawan@gmail.com"
+                }
+            ],
+            "description": "Previewer PDF File with PDF.js for Yii2",
+            "keywords": [
+                "jquery",
+                "pdfjs",
+                "pdfviewer",
+                "widget",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/sugeng-sulistiyawan/yii2-pdfjs/issues",
+                "source": "https://github.com/sugeng-sulistiyawan/yii2-pdfjs"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sugeng-sulistiyawan",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-22T14:25:35+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -5481,12 +5538,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "ext-mbstring": "*"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }

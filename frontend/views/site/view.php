@@ -23,9 +23,10 @@ $this->title = $model->title;
             <?php endif; ?>
             <div class="mt-4">
                 <?php if ($model->book_path): ?>
-                    <a href="<?= Url::to('@web/' . $model->book_path) ?>" target="_blank" class="btn btn-outline-primary">
+                    <a href="<?= Url::to(['site/read', 'id' => $model->id]) ?>" class="btn btn-outline-primary">
                         Читать
                     </a>
+
                 <?php endif; ?>
             </div>
         </div>

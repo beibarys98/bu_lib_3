@@ -112,6 +112,20 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionRead($id)
+    {
+        $model = Book::findOne($id);
+
+        if (!$model || !$model->book_path) {
+            throw new \yii\web\NotFoundHttpException("Книга не найдена.");
+        }
+
+        return $this->render('read', [
+            'model' => $model,
+        ]);
+    }
+
+
     public function actionSearch($q = '')
     {
         $query = Book::find()
