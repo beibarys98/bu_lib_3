@@ -51,7 +51,13 @@ $types = ArrayHelper::map(Type::find()->all(), 'id', 'title_ru');
 
     <?= $form->field($model, 'language', ['options' => ['class' => 'mb-3']])
         ->dropDownList(
-            ['kz' => 'Казахский', 'ru' => 'Русский', 'kz/ru' => 'Казахский/Русский'],
+            [
+                'kz' => 'Казахский',
+                'ru' => 'Русский',
+                'en' => 'Английский',
+                'kz/ru' => 'Казахский/Русский',
+                'kz/en' => 'Казахский/Анлгийский',
+                'ru/en' => 'Русский/Английский'],
             ['prompt' => 'Выберите язык']
         )->label(false) ?>
 
